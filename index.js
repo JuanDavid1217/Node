@@ -30,7 +30,7 @@ const runreaction = async (username, publication_id, reaction)=>{
     messages:[{
       'value': `{"name":"${username}",
                  "publication":"${publication_id}",
-                 "reaction":"${reaction}}` 
+                 "reaction":"${reaction}"}` 
     }],
   })
   await producer.disconnect()
@@ -55,7 +55,7 @@ const runcomments = async (username, publication_id, comment)=>{
     messages:[{
       'value': `{"name":"${username}",
                  "publication":"${publication_id}",
-                 "comment":"${comment}}` 
+                 "comment":"${comment}"}` 
     }],
   })
   await producer.disconnect()
