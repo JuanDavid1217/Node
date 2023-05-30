@@ -43,7 +43,7 @@ app.get('/reaction', (req, res, next) => {
   res.send({ 'name' : username,
              'publication' : publication_id,
              'reaction': reaction} );
-  run(username).catch(e => console.error(`[example/producer] ${e.message}`, e))
+  run(username, publication_id, reaction).catch(e => console.error(`[example/producer] ${e.message}`, e))
 
 });
 
@@ -68,7 +68,7 @@ app.get('/comment', (req, res, next) => {
   res.send({ 'name' : username,
              'publication' : publication_id,
              'comment': comment} );
-  run(username).catch(e => console.error(`[example/producer] ${e.message}`, e))
+  run(username, publication_id, comment).catch(e => console.error(`[example/producer] ${e.message}`, e))
 
 });
 
